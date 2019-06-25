@@ -29,30 +29,34 @@ The Patient Identification Domain A issues a patient with its following local id
 { 
       "use" : "official",
       "type" : "source",
-      “system” :  “http://www.domaina.com/fhir/mpi/localid”,
-      “value” :  “1000000001”,
-      “assigner” : {
-                      “display” : “Patient Identification Domain A” 
+      "system" : "http://www.domaina.com/fhir/mpi/localid",
+      "value" : "1000000001",
+      "assigner" : {
+                      "display" : "Patient Identification Domain A" 
                    }
 }
 ```  
 The Patient Identification Domain B issues a patient with its following local identifier: 
-  { 
-      “use” : “official”,
-	    “type” : “source”
-      “system” : “http://www.domainb.com/fhir/mpi/localid”,
-      “value” : “1000000001”,
-      “assigner”: {
-                    “display” : “Patient Identification Domain B” 
-                  }
-  }
+```json
+{ 
+      "use" : "official",
+      "type" : "source",
+      "system" : "http://www.domainb.com/fhir/mpi/localid",
+      "value" : "1000000001",
+      "assigner" : {
+                   	"display" : "Patient Identification Domain B" 
+                   }
+}
+```
 An MPI links these two similar-enough patient records and creates a master patient record with the following master patient identifier:
-  { 
-      “use” : “official”,
-      “type” : “mpi”,
-      “system” : “http://www.masterdomain.com/fhir/mpi/euid”,
-      “value” :  “1000000000”,
-      “assigner”: {
-                     “display” : “Patient Mater Identification Domain” 
+```json  
+{ 
+      "use" : "official",
+      "type" : "mpi",
+      "system" : "http://www.masterdomain.com/fhir/mpi/euid",
+      "value" : "1000000000",
+      "assigner": {
+                     "display" : "Patient Mater Identification Domain" 
                   }
-  }
+}
+```
