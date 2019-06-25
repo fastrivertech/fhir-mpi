@@ -61,3 +61,8 @@ An MPI links these two similar-enough patient records and creates a master patie
 }
 ```
 An FHIR system demands to manage master patient identifiers. A master patient identifier bonds patient records that are similar enough together. An implementation determines whether an FHIR system maintains a master patient record statically or dynamically.  The underlying MPI determines how two or more patient records are similar enough to embody the same patient using configurable match algorithms. 
+
+## FHIR MPI Operations/Transactions
+
+FHIR MPI interface uses the FHIR operation style to defines MPI operations. This document includes  the following generic Patient MPI transactions:
+
