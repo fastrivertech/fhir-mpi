@@ -26,15 +26,16 @@ In Figure 4.1, an FHIR system includes two source patient domains, which are Pat
 
 The Patient Identification Domain A issues a patient with its following local identifier: 
 ```json
-  { 
-      “use” : “official”,
-      “type” : “source”,
+{ 
+      "use" : "official",
+      "type" : "source",
       “system” :  “http://www.domaina.com/fhir/mpi/localid”,
       “value” :  “1000000001”,
       “assigner” : {
                       “display” : “Patient Identification Domain A” 
                    }
-  }
+}
+```  
 The Patient Identification Domain B issues a patient with its following local identifier: 
   { 
       “use” : “official”,
