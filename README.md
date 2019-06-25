@@ -19,11 +19,13 @@ A Master Patient Index (MPI) or an Enterprise Master Patient Index (EMPI) provid
 One or more identifiers pinpoints a patient resource.  A namespace or system issues a unique identifier within the issuing system to a patient.  A namespace or a system also considers as a patient identifier domain. An MPI is a master patient identification domain, which is also named MPI domain in this document. The MPI domain assigns a unique enterprise-level identifier to each golden patient record or master patient record by the underlying MPI.  A set of similar-enough patients from distinct patient identifier domains links together with a unique enterprise-level identifier from the MPI domain to embody the same patient.
 
 ![Figure 4.1](images/figure-4.1.jpeg)
+
 Figure 4.1 MPI Domain Integrating with Two Source Patient Identification Domains
 
 In Figure 4.1, an FHIR system includes two source patient domains, which are Patient Identification Domain A and Patient Identification Domain B. Patient Identification Domain A source and Patient Identification Domain B source ingest patients into the FHIR system through standard FHIR operations and FHIR MPI operations.  An MPI generates and manages the Patient Identification Master Domain through integrating with the FHIR system.
 
 The Patient Identification Domain A issues a patient with its following local identifier: 
+```json
   { 
       “use” : “official”,
       “type” : “source”,
