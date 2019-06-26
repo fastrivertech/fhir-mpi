@@ -68,6 +68,8 @@ FHIR MPI interface uses the FHIR operation style that defines MPI operations. Th
 
 ### 5.1 Match
 
+The match operation “$match“ accepts a patient resource from one patient identification domain and performs an intelligent search for possible matches in the system using the configured underlying MPI. If it finds a match, it links the patient resource with the matches and updates the master patient resource. Otherwise, it creates a master patient resource and assigns a master patient index identifier. In the match case, the underlying MPI determines if it replaces or updates the matched record from the same patient identification domain. It also evaluates potential duplicates.
+
 ### 5.2 Update
 
 ### 5.3 Search
