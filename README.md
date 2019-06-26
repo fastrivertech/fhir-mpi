@@ -64,7 +64,7 @@ An FHIR system demands to manage master patient identifiers. A master patient id
 
 ## 5. FHIR MPI Operations/Transactions
 
-FHIR MPI interface uses the FHIR operation style to defines MPI operations. This document includes  the following generic Patient MPI transactions. FHIR MPI operations execute on master patient identification domain and patient identification source domains, and common FHIR interactions are still applicable to these domains.  
+FHIR MPI interface uses the FHIR operation style that defines MPI operations. This document includes the following generic Patient MPI transactions. FHIR MPI operations execute on master patient identification domain and patient identification source domains, and common FHIR interactions are still applicable to these domains.  Refer to FHIR documentation for audit and security of operations.   
 
 ### 5.1 Match
 
