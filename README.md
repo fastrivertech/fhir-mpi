@@ -72,7 +72,7 @@ The match operation “$match“ accepts a patient resource from one patient ide
 
 ### 5.2 Update
 
-The update operation uses the FHIR update interaction to update an existing patient source resource or a current master patient resource by distinguishing the identifier of the input patient resource. The underlying MPI determines how to update a current patient source resource or an existing patient master resource. Generally, updating a current patient master resource recalculates the master patient resource based on the underlying algorithm configuration.
+The update operation uses the FHIR update interaction to update an existing patient source resource or a current master patient resource by distinguishing the identifier of the input patient resource. The underlying MPI determines how to update a current patient source resource or an existing master patient resource. Generally, updating a current patient source resource recalculates the master patient resource based on the underlying algorithm configuration.
 
 ### 5.3 Search
 
