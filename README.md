@@ -2,7 +2,7 @@
 Version 1.0
 28 June 2019
 
-Fast River Technologies Inc.
+charles.ye@fastrivertech.com
 
 ## 1. Introduction
 This document introduces a collection of FHIR MPI (Master Patient Index), or EMPI (Enterprise Master Patient Index), operations. FHIR R4 Patient match operation is  a part of it. The document defines the request of each MPI operation,  the response of each MPI operation, operation outcome details, and error conditions for the transactions of MPI operations.  Traditionally, the MPI interfaces are always vendor-specific, proprietary, and complicated. Integrating healthcare information systems with an MPI is still tricky and vendor locked. The FHIR MPI operations are aimed to overcome these challenges for the FHIR-based systems. 
