@@ -121,30 +121,40 @@ The notification operation notifies any application that subscribes on any chang
 ## 6. FHIR MPI Operation and Message Definitions
 
 ### 6.1 Match
+TBD
 
 ### 6.2 Update
+TBD
 
 ### 6.3 Search
+TBD
 
 ### 6.4 Potential
+TBD
 
 ### 6.5 Merge
+TBD
 
 ### 6.6 Unmerge
+TBD
 
 ### 6.7 Link
+TBD
 
 ### 6.8 Unlink
+TBD
 
 ### 6.9 Delete
+TBD
 
 ### 6.10 Undelete
+TBD
 
 ### 6.11 History
+TBD
 
 ### 6.12 Notification
-
-
+TBD
 
 
 
