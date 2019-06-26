@@ -104,11 +104,47 @@ The unlink operation “$unlink” unlink two patient identifiers that are invol
 
 ### 5.9 Delete
 
+The delete operation uses the FHIR delete interaction to delete a patient resource or a master patient resource. Deleting a patient resource updates the master patient resource that associated with. It is not required to permanently remove a patient resource. 
+
 ### 5.10 Undelete
+
+The undelete operation “$undelete” recovers the patient resource that deleted in the delete transaction. It rolls back the delete transaction.
 
 ### 5.11 History
 
+The history operation uses the FHIR history interaction to retrieves the history of  a patient resource or a master patient resource. 
+
 ### 5.12 Notification
 
+The notification operation notifies any application that subscribes on any change on the system. 
+
 ## 6. FHIR MPI Operation and Message Definitions
+
+### 6.1 Match
+
+### 6.2 Update
+
+### 6.3 Search
+
+### 6.4 Potential
+
+### 6.5 Merge
+
+### 6.6 Unmerge
+
+### 6.7 Link
+
+### 6.8 Unlink
+
+### 6.9 Delete
+
+### 6.10 Undelete
+
+### 6.11 History
+
+### 6.12 Notification
+
+
+
+
 
