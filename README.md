@@ -76,7 +76,11 @@ The update operation uses the FHIR update interaction to update an existing pati
 
 ### 5.3 Search
 
-### 5.4 Potential Duplicate
+The search operation “$search” performs an intelligent search according to the user-specified search criteria. A return contains the master patient resources and patient source resources that matched the search criteria with the match scores. Primarily, a probabilistic search or an advanced similarity search applies to find any patient resources that are similar enough to the search criteria.  The underlying MPI could support different kinds of search modes, for example, fuzzy search or phonetic search.
+
+### 5.4 Potential
+
+The potential duplicate operation “$potential” retrieves potentially duplicated patient resources on the search criteria. Usually, an MPI requires manual resolution for the potential duplicates.
 
 ### 5.5 Merge
 
