@@ -88,4 +88,7 @@ FHIR MPI interface uses the FHIR operation style to defines MPI operations. This
 
 ### 5.11 History
 
+### 5.12 Notification
+
+## 6. FHIR MPI Operation and Message Definitions
 
