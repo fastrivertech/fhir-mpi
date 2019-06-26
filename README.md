@@ -70,5 +70,22 @@ FHIR MPI interface uses the FHIR operation style to defines MPI operations. This
 
 ### 5.2 Update
 
+### 5.3 Search
+
+### 5.4 Potential Duplicate
+
+### 5.5 Merge
+
+### 5.6 Unmerge
+
+### 5.7 Link
+
+### 5.8 Unlink
+
+### 5.9 Delete
+
+### 5.10 Undelete
+
+### 5.11 History
 
 
