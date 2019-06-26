@@ -96,7 +96,11 @@ The unmerge operation “$unmerge” unmerges two patient identifiers that are i
 
 ### 5.7 Link
 
+The link operation “$link” links one patient identifier to another one within one Source Patient Domain or across two Source Patient Domains. Linking two patient identifiers does not require the actual merging of two patient resources.  After a link, one master patient identifier associates with the linked patient resources and the involved patient records remain distinct. In the case two patient identifiers are not linked and each of them associates with a distinct master patient identifier before a link, linking them merges two master patient identifiers. The MPI determines how to merge two master patient resources based on the configurable algorithms.  
+
 ### 5.8 Unlink
+
+The unlink operation “$unlink” unlink two patient identifiers that are involved in the most recent link operation and rolls back the linking transaction. After an unlink, the subsumed master patient identifier becomes active again.
 
 ### 5.9 Delete
 
