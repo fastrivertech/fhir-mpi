@@ -121,7 +121,8 @@ The notification operation notifies any application that subscribes on any chang
 ## 6. FHIR MPI Operation and Message Definitions
 
 ### 6.1 Match
-TBD
+#### 6.1.1 Description
+
 
 ### 6.2 Update
 TBD
