@@ -1,4 +1,4 @@
-# 6.5 Merge
+# 6.5 Merge Operation
 ### 6.5.1 Description
 ### 6.5.2 Request Message
 ### 6.5.3 Response Message

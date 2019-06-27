@@ -1,4 +1,4 @@
-# 6.10 Undelete
+# 6.10 Undelete Operation
 ### 6.10.1 Description
 ### 6.10.2 Request Message
 ### 6.10.3 Response Message

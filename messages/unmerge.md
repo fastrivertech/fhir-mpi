@@ -1,4 +1,4 @@
-# 6.6 Unmerge
+# 6.6 Unmerge Operation
 ### 6.6.1 Description
 ### 6.6.2 Request Message
 ### 6.6.3 Response Message

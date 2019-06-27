@@ -1,4 +1,4 @@
-# 6.9 Delete
+# 6.9 Delete Operation
 ### 6.9.1 Description
 ### 6.9.2 Request Message
 ### 6.9.3 Response Message

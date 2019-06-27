@@ -1,4 +1,4 @@
-# 6.4 Potential
+# 6.4 Potential Operation
 ### 6.4.1 Description
 ### 6.4.2 Request Message
 ### 6.4.3 Response Message

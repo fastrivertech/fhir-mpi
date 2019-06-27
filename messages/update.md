@@ -1,4 +1,4 @@
-# 6.2 Update
+# 6.2 Update Operation
 ### 6.2.1 Description
 ### 6.2.2 Request Message
 ### 6.2.3 Response Message

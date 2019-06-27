@@ -1,4 +1,4 @@
-# 6.3 Search
+# 6.3 Search Operation
 ### 6.3.1 Description
 ### 6.3.2 Request Message
 ### 6.3.3 Response Message
