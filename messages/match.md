@@ -16,7 +16,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient detail for the MPI to match  |
-| MatchOption | 0..1 | Boolean | This parameter is EMPI-specific and specifies logic for the match algorithm. An EMPI can intepret the meaning of the parameter and introduce more match options.| 
+| MatchOption | 0..1 | Boolean | This parameter is EMPI-specific and specifies logic for the match algorithm. An EMPI inteprets the meaning of this parameter, and also can introduce more match options. For Oracle OHMPI, MatchOption is matchUpdate. For FHIR R4 default, MatchOption is onlyCertainMatches | 
 
 FHIR R4 $match operation specifies parameters onlyCertainMatches and count. Not everyone EMPI is mandatory to support them.  
        
