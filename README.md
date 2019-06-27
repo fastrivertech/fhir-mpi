@@ -121,26 +121,17 @@ The notification operation notifies any application that subscribes on any chang
 
 ## 6. FHIR MPI Operation and Message Definitions
 
+Click each of the following sections for detail:
+
 ### [6.1 Match](/messages/match.md)
-
 ### [6.2 Update](/messages/update.md)
-
 ### [6.3 Search](/messages/search.md)
-
 ### [6.4 Potential](messages/potential.md)
-
 ### [6.5 Merge](/messages/merge.md)
-
 ### [6.6 Unmerge](/messages/unmerge.md)
-
 ### [6.7 Link](/messages/link.md)
-
 ### [6.8 Unlink](/messages/unlink.md)
-
 ### [6.9 Delete](/messages/delete.md)
-
 ### [6.10 Undelete](/messages/undelete.md)
-
 ### [6.11 History](/messages/history.md)
-
 ### [6.12 Notification](/messages/notification.md)
