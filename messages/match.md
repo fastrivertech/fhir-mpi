@@ -46,4 +46,12 @@ Following table lists error, warning, and information messages that provide deta
 
 ## 6.1.5 Response Status
 
+| Status | Description |
+|:-------|:------------|
+| 200 OK | The MPI match process succeeded. A match is found, or a list of potential matches.|
+| 201 Created | The MPI match process succeeded. A match is not found, or with a list of potential matches, a new patient is created. |
+| 400 Bad Request | The MPI failed to process the request either because of invalid resource or invalid parameters provided in the request. |
+| 500 Internal Server Error | An unexpected error occurred. |
+
+
 ## 6.1.6 Examples
