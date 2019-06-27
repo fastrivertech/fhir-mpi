@@ -16,8 +16,10 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient detail for the MPI to match  |
-| Option | 0..1 | Boolean | This parameter specifies logic for the match algorithm and EMPI-specific | 
+| MatchOption | 0..1 | Boolean | This parameter is EMPI-specific and specifies logic for the match algorithm. An EMPI can intepret the meaning of the parameter and introduce more match options.| 
 
+FHIR R4 $match operation specifies parameters onlyCertainMatches and count. Not everyone EMPI is mandatory to support them.  
+       
 ## 6.1.3 Response Message
 
 ## 6.1.4 OperationOutcome
