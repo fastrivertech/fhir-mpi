@@ -68,23 +68,23 @@ An FHIR system demands to manage master patient identifiers. A master patient id
 
 FHIR MPI interface uses the FHIR operation style that defines MPI operations. This document includes the following generic Patient MPI transactions. FHIR MPI operations execute on master patient identification domain and patient identification source domains, and common FHIR interactions are still applicable to these domains.  Refer to FHIR documentation for audit and security of operations.   
 
-### 5.1 Match
+### 5.1 Match Operation
 
 The match operation “$match“ accepts a patient resource from one patient identification domain and performs an intelligent search for possible matches in the system using the configured underlying MPI. If it finds a match, it links the patient resource with the matches and updates the master patient resource. Otherwise, it creates a master patient resource and assigns a master patient index identifier. In the match case, the underlying MPI determines if it replaces or updates the matched record from the same patient identification domain. It also evaluates potential duplicates.
 
-### 5.2 Update
+### 5.2 Update Operation
 
 The update operation uses the FHIR update interaction to update an existing patient source resource or a current master patient resource by distinguishing the identifier of the input patient resource. The underlying MPI determines how to update a current patient source resource or an existing master patient resource. Generally, updating a current patient source resource recalculates the master patient resource based on the underlying algorithm configuration.
 
-### 5.3 Search
+### 5.3 Search Operation
 
 The search operation “$search” performs an intelligent search according to the user-specified search criteria. A return contains the master patient resources and patient source resources that matched the search criteria with the match scores. Primarily, a probabilistic search or an advanced similarity search applies to find any patient resources that are similar enough to the search criteria.  The underlying MPI could support different kinds of search modes, for example, fuzzy search or phonetic search.
 
-### 5.4 Potential
+### 5.4 Potential Operation
 
 The potential duplicate operation “$potential” retrieves potentially duplicated patient resources on the search criteria. Usually, an MPI requires manual resolution for the potential duplicates.
 
-### 5.5 Merge
+### 5.5 Merge Operation
 
 The merge operation “$merge” merges two patient identifiers. Two patient identifiers can be either within a Patient Identification Source Domain or within a Master Patient Identification Domain, but cannot mix across the domains. When two patient resources in a patient identification domain are identified to be the same patient, the merge operation is used to merge a source patient identifier to a target patient identifier in the domain. After a merge, the subsumed patient identifier is not accessible; deleting the subsumed patient identifier is not required.  
 
@@ -92,47 +92,47 @@ For details, the merge operation performs two types of merge: Source Domain merg
 
 Merging two master patient identifiers from a Patient Identification Master Domain involves the subsumed master patient identifier and the surviving master patient identifier. The MPI determines how to unite two master patient resources associated with the two master patient identifiers. The subsumed master patient identifier shall no longer be referenced.  Searching a subsumed master patient identifier shall get an empty return and include the surviving master patient identifier.
 
-### 5.6 Unmerge
+### 5.6 Unmerge Operation
 
 The unmerge operation “$unmerge” unmerges two patient identifiers that are involved in the most recent merge operation and rolls back the merging transaction. After an unmerge, the subsumed patient identifier becomes active again. Further, the unmerge operation supports two types of unmerge: Source Domain unmerge, and Master Domain unmerge.
 
-### 5.7 Link
+### 5.7 Link Operation
 
 The link operation “$link” links one patient identifier to another one within one Source Patient Domain or across two Source Patient Domains. Linking two patient identifiers does not require the actual merging of two patient resources.  After a link, one master patient identifier associates with the linked patient resources and the involved patient records remain distinct. In the case two patient identifiers are not linked and each of them associates with a distinct master patient identifier before a link, linking them merges two master patient identifiers. The MPI determines how to merge two master patient resources based on the configurable algorithms.  
 
-### 5.8 Unlink
+### 5.8 Unlink Operation
 
 The unlink operation “$unlink” unlink two patient identifiers that are involved in the most recent link operation and rolls back the linking transaction. After an unlink, the subsumed master patient identifier becomes active again.
 
-### 5.9 Delete
+### 5.9 Delete Operation
 
 The delete operation uses the FHIR delete interaction to delete a patient resource or a master patient resource. Deleting a patient resource updates the master patient resource that associated with. It is not required to permanently remove a patient resource. 
 
-### 5.10 Undelete
+### 5.10 Undelete Operation
 
 The undelete operation “$undelete” recovers the patient resource that deleted in the delete transaction. It rolls back the delete transaction.
 
-### 5.11 History
+### 5.11 History Operation
 
 The history operation uses the FHIR history interaction to retrieves the history of  a patient resource or a master patient resource. 
 
-### 5.12 Notification
+### 5.12 Notification Operation
 
 The notification operation notifies any application that subscribes on any change on the system. 
 
-## 6. FHIR MPI Operation and Message Definitions
+## 6. FHIR MPI Operation and Message Definition
 
 Click each of the following sections for detail:
 
-**[6.1 Match](/messages/match.md)**  
-**[6.2 Update](/messages/update.md)**  
-**[6.3 Search](/messages/search.md)**  
-**[6.4 Potential](messages/potential.md)**  
-**[6.5 Merge](/messages/merge.md)**  
-**[6.6 Unmerge](/messages/unmerge.md)**  
-**[6.7 Link](/messages/link.md)**  
-**[6.8 Unlink](/messages/unlink.md)**  
-**[6.9 Delete](/messages/delete.md)**  
-**[6.10 Undelete](/messages/undelete.md)**  
-**[6.11 History](/messages/history.md)**  
-**[6.12 Notification](/messages/notification.md)**  
+**[6.1 Match Operation](/messages/match.md)**  
+**[6.2 Update Operation](/messages/update.md)**  
+**[6.3 Search Operation](/messages/search.md)**  
+**[6.4 Potential Operation](messages/potential.md)**  
+**[6.5 Merge Operation](/messages/merge.md)**  
+**[6.6 Unmerge Operation](/messages/unmerge.md)**  
+**[6.7 Link Operation](/messages/link.md)**  
+**[6.8 Unlink Operation](/messages/unlink.md)**  
+**[6.9 Delete Operation](/messages/delete.md)**  
+**[6.10 Undelete Operation](/messages/undelete.md)**  
+**[6.11 History Operation](/messages/history.md)**  
+**[6.12 Notification Operation](/messages/notification.md)**  
