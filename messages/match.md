@@ -22,6 +22,12 @@ FHIR R4 $match operation specifies parameters onlyCertainMatches and count. Not 
        
 ## 6.1.3 Response Message
 
+| Name | Cardinality | Type | Description |
+|:-----|:------------|:-----|:------------|
+| Return | 1..1 | Bundle Resource | A bundle contains one matched patient resource, a list of potential matches, an OperationOutcome which includes a match result code.  An OperationOutcome might be returned with a failure code if the operation is unsuccessful. |
+
+
+
 ## 6.1.4 OperationOutcome
 
 ## 6.1.5 Response Status
