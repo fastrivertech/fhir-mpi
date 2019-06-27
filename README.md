@@ -17,7 +17,7 @@ This document describes the central FHIR-based EMPI interface by leveraging FHIR
 ## 3. Assumptions
 This document assumes FHIR Specification R4, which is the current officially released normative version at the time of this writing.
 
-## 4. Integration FHIR with EMPI
+## 4. Integrating FHIR with EMPI
 
 An Enterprise Master Patient Index (EMPI) or a Master Patient Index (MPI) provides a single source of truth about a patient within or across healthcare organization systems, ensuring the accuracy and consistency of the unified and trusted patient information.  An EMPI generates a golden patient record, or a master patient record,  from a set of similar-enough patient records and assigns a unique enterprise -level identifier, or a master patient index, by using algorithms of matching, merging, and deduplicating.  These similar-enough patient records are identified as being for the same patient and linked together through the enterprise-level identifier.  The patient information used for matching is a subset of patient demographic information, including name, gender, date of birth, social security number, address, and contact information.  An EMPI implementation determines the match types.  
 
