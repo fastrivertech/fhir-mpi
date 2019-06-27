@@ -55,3 +55,55 @@ Following table lists error, warning, and information messages that provide deta
 
 
 ## 6.1.6 Examples
+
+Request: 
+
+```json
+POST [base]/Patient/$match
+{  
+  "resourceType":"Parameters",
+  "id":"example",
+  "parameter":[  
+    {  
+      "name":"resource",
+      "resource":{  
+        "resourceType":"Patient",
+        "identifier":[  
+          {  
+            "use":"usual",
+            "type":{  
+              "coding":[  
+                {  
+                  "system":"http://hl7.org/fhir/v2/0203",
+                  "code":"MR"
+                }
+              ]
+            },
+            "system":"urn:oid:1.2.36.146.595.217.0.1",
+            "value":"12345"
+          }
+        ],
+        "name":[  
+          {  
+            "family":[  
+              "Chalmers"
+            ],
+            "given":[  
+              "Peter"
+            ]
+          }
+        ],
+        "gender":"male",
+        "birthDate":"1974-12-25"
+      }
+    },
+    {  
+      "name":"matchOption",
+      "valueBoolean":"true"
+    }
+  ]
+}
+```
+
+Response:
+
