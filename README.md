@@ -17,14 +17,17 @@ This document describes the central FHIR-based EMPI interface by leveraging FHIR
 ## 3. Assumptions
 This document assumes FHIR Specification R4, which is the current officially released normative version at the time of this writing.
 
-## 4. Integration FHIR with MPI
-A Master Patient Index (MPI) or an Enterprise Master Patient Index (EMPI) provides a single source of truth about a patient within or across healthcare organization systems, ensuring the accuracy and consistency of the unified and trusted patient data.  An MPI generates a golden patient record or a master patient record from a set of similar-enough patient records and assigns a unique enterprise -level identifier by using matching, merging, and deduplicating.  These similar enough patient records are linked together and represent the same patient.  The patient data is used for matching is a subset of patient demographic information, including name, gender, date of birth, social security number, address, and contact information. 
+## 4. Integration FHIR with EMPI
 
-One or more identifiers pinpoints a patient resource.  A namespace or system issues a unique identifier within the issuing system to a patient.  A namespace or a system also considers as a patient identifier domain. An MPI is a master patient identification domain, which is also named MPI domain in this document. The MPI domain assigns a unique enterprise-level identifier to each golden patient record or master patient record by the underlying MPI.  A set of similar-enough patients from distinct patient identifier domains links together with a unique enterprise-level identifier from the MPI domain to embody the same patient.
+An Enterprise Master Patient Index (EMPI) or a Master Patient Index (MPI) provides a single source of truth about a patient within or across healthcare organization systems, ensuring the accuracy and consistency of the unified and trusted patient information.  An EMPI generates a golden patient record, or a master patient record,  from a set of similar-enough patient records and assigns a unique enterprise -level identifier, or a master patient index, by using algorithms of matching, merging, and deduplicating.  These similar-enough patient records are identified as being for the same patient and linked together through the enterprise-level identifier.  The patient information used for matching is a subset of patient demographic information, including name, gender, date of birth, social security number, address, and contact information.  An EMPI implementation determines the match types.  
+
+In FHIR, the terms patient and patient resource are used interchangeably. One or more identifiers assign a patient resource.  A namespace or system issues a unique identifier within the issuing system to a patient resource.  A namespace or a system also considers as a patient identification source domain in EMPI aspect. An EMPI is a patient identification master domain, which is also named EMPI domain in this document. The EMPI domain assigns a unique enterprise-level master identifier, also known as a master patient index, to each golden patient record or master patient resource by the underlying EMPI.  A set of similar-enough patient resources from distinct patient identification source domains links together by a unique enterprise-level master identifier from the EMPI domain to embody the same patient. 
+
+Figure 4.1 depicts the relationship between two patient identification source domains and one EMPI domain.
 
 ![Figure 4.1](images/figure-4.1.jpeg)
 
-Figure 4.1 MPI Domain Integrating with Two Source Patient Identification Domains
+Figure 4.1 Two Patient Identification Source ddmains and one EMPI domain
 
 In Figure 4.1, an FHIR system includes two source patient domains, which are Patient Identification Domain A and Patient Identification Domain B. Patient Identification Domain A source and Patient Identification Domain B source ingest patients into the FHIR system through standard FHIR operations and FHIR MPI operations.  An MPI generates and manages the Patient Identification Master Domain through integrating with the FHIR system.
 
