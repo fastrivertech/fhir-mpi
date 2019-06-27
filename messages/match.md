@@ -13,6 +13,11 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Request Headers | |
 | Request Body | Parameters Resource |
 
+| Name | Cardinality | Type | Description |
+|:-----|:------------|:-----|:------------|
+| Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient detail for the MPI to match  |
+| Option | 0..1 | Boolean | This parameter specifies logic for the match algorithm and EMPI-specific | 
+
 ## 6.1.3 Response Message
 
 ## 6.1.4 OperationOutcome
