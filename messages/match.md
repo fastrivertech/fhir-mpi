@@ -30,8 +30,19 @@ An MPI determines the match logic whether more than one matches above the match 
 
 Refer to https://www.hl7.org/fhir/extension-match-grade.html for match grade.
 
-
 ## 6.1.4 OperationOutcome
+
+Following table lists error, warning, and information messages that provide detailed information about the outcome of the operation. Each MPI generates different information about the result of the operation. 
+
+| Issue Severity | Issue Code | Issue Detail | Issue Diagnostics |
+|:---------------|:-----------|:-------------|:------------------|
+| Information | match-found | Match found | N/A |
+| Information | match-not-found | Match not found, a new record | N/A |
+| Information | patient-found-replaced | Existing patient found and replaced | N/A |
+| Information | patient-found-updated | Existing patient found and updated | N/A |
+| Error | invalid-resource | Input resource not valid | invalid-resource |
+| Error | invalid-parameter | Input paramter not valid | invalid-parameter |
+| Error | exception | match fails | exception |
 
 ## 6.1.5 Response Status
 
