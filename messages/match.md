@@ -6,7 +6,9 @@ FHIR MPI match operation “$match” uses FHR R4 match operation. Clients use t
 For FHIR match operation definition refer to http://hl7.org/fhir/operationDefintion/Patient-match
 
 ## 6.1.2 Request Message
-| URL | [BaseUrl]/Patient/$match |         
+
+| URL | [BaseUrl]/Patient/$match |
+|:----|:-------------------------|
 | HTTP Method | POST |
 | Request Headers | |
 | Request Body | Parameters Resource |
