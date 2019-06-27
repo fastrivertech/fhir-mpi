@@ -123,8 +123,8 @@ The notification operation notifies any application that subscribes on any chang
 
 Click each of the following sections for detail:
 
-***[6.1 Match](/messages/match.md)
-[6.2 Update](/messages/update.md)
+**[6.1 Match](/messages/match.md)**
+**[6.2 Update](/messages/update.md)**
 [6.3 Search](/messages/search.md)
 [6.4 Potential](messages/potential.md)
 [6.5 Merge](/messages/merge.md)
