@@ -59,7 +59,7 @@ Following table lists error, warning, and information messages that provide deta
 Request: 
 
 ```json
-POST [base]/Patient/$match
+POST [BaseUrl]/Patient/$match
 {  
   "resourceType":"Parameters",
   "id":"example",
