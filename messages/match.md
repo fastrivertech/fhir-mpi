@@ -106,4 +106,91 @@ POST [BaseUr]/Patient/$match
 ```
 
 Response:
-
+```json
+HTTP/1.1 200 OK
+{  
+  "resourceType":"Bundle",
+  "id":"26419249-18b3-45de-b10e-dca0b2e72b",
+  "meta":{  
+    "lastUpdated":"2016-03-18T03:28:49Z"
+  },
+  "type":"searchset",
+  "total":2,
+  "entry":[  
+    {  
+      "fullUrl":"http://server/path/Patient/example",
+      "resource":{  
+        "resourceType":"Patient",
+        "id":"example",
+        "identifier":[  
+          {  
+            "use":"MPI",
+            "system":"http://www.fastrivertech.com/fhir/mpi/euid",
+            "value":"1000000001",
+            "assigner":{  
+              "display":"Fast River Technologies"
+            }
+          }
+        ]
+      },
+      "search":{  
+        "extension":[  
+          {  
+            "url":"http://hl7.org/fhir/StructureDefinition/match-grade",
+            "valueCode":"certain"
+          }
+        ],
+        "mode":"match",
+        "score":0.9
+      },
+      "response":{  
+        "status":"match-found",
+        "outcome":{  
+          "resourceType":"OperationOutcome",
+          "id":"101",
+          "issue":[  
+            {  
+              "severity":"informational",
+              "code":"match-found",
+              "details":{  
+                "text":"match found"
+              },
+              "diagnostics":"N/A"
+            }
+          ]
+        }
+      }
+    },
+    {  
+      "fullUrl":"http://server/path/Patient/292",
+      "resource":{  
+        "resourceType":"Patient",
+        "id":"292",
+        "identifier":[  
+          {  
+            "use":"MPI",
+            "system":"http://www.fastrivertech.com/fhir/mpi/euid",
+            "value":"1000000000",
+            "assigner":{  
+              "display":"Fast River Technologies"
+            }
+          }
+        ]
+      },
+      "search":{  
+        "extension":[  
+          {  
+            "url":"http://hl7.org/fhir/StructureDefinition/match-grade",
+            "valueCode":"possible"
+          }
+        ],
+        "mode":"match",
+        "score":0.2
+      },
+      "response":{  
+        "status":"possible"
+      }
+    }
+  ]
+}
+```
