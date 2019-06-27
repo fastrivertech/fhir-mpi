@@ -29,9 +29,10 @@ Figure 4.1 depicts the relationship between two patient identification source do
 
 Figure 4.1 Two Patient Identification Source ddmains and one EMPI domain
 
-In Figure 4.1, an FHIR system includes two source patient domains, which are Patient Identification Domain A and Patient Identification Domain B. Patient Identification Domain A source and Patient Identification Domain B source ingest patients into the FHIR system through standard FHIR operations and FHIR MPI operations.  An MPI generates and manages the Patient Identification Master Domain through integrating with the FHIR system.
+In Figure 4.1, an FHIR system includes two patient source domains, which are Patient Identification Source Domain A and Patient Identification Source Domain B. Patient Source A and Patient Source B assign unique source patient identifiers to source patient resources respectively and ingest the patient resources into the FHIR system through standard FHIR interactions and FHIR EMPI operations.  
+An integrated EMPI manages the Patient Identification Master Domain and generates master patient identifiers. 
 
-The Patient Identification Domain A issues a patient with its following local identifier: 
+The Patient Source A issues a source patient identifier to a patient resource within the Patient Source Domain A.  The source patient identifier is a local identifier to  the Patient Source A.  The following is an example of an identifier:
 ```json
 { 
       "use" : "official",
