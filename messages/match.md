@@ -26,6 +26,9 @@ FHIR R4 $match operation specifies parameters onlyCertainMatches and count. Not 
 |:-----|:------------|:-----|:------------|
 | Return | 1..1 | Bundle Resource | A bundle contains one matched patient resource, a list of potential matches, an OperationOutcome which includes a match result code.  An OperationOutcome might be returned with a failure code if the operation is unsuccessful. |
 
+An MPI determines the match logic whether more than one matches above the match threshold are considered. If an MPI matching algorithm finds more than one records above the match threshold,  the MPI might only consider one record with the highest matching score as math, and the rest flags as potential matches. An MPI might just think none of the records as a match and all flag potential matches.  A list of potential matches contained in the bundle is ordered by the descending match score. All patient records shall have a search score from 0 to 1, where 1 is the most certain match, along with an extension "match-grade" that indicates how likely the patient is to be matched.
+
+Refer to https://www.hl7.org/fhir/extension-match-grade.html for match grade.
 
 
 ## 6.1.4 OperationOutcome
