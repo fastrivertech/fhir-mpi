@@ -34,40 +34,68 @@ An integrated EMPI manages the Patient Identification Master Domain and generate
 
 The Patient Source A issues a source patient identifier to a patient resource within the Patient Source Domain A.  The source patient identifier is a local identifier to  the Patient Source A.  The following is an example of an identifier:
 ```json
-{ 
-      "use" : "official",
-      "type" : "source",
-      "system" : "http://www.domaina.com/fhir/mpi/localid",
-      "value" : "1000000001",
-      "assigner" : {
-                      "display" : "Patient Identification Domain A" 
-                   }
+{  
+   "use":"official",
+   "type":{  
+      "coding":[  
+         {  
+            "system":"http://www.patient-source-a.com/localid",
+            "code":"PatientSourceA",
+            "display":"Patient Source Domain A"
+         }
+      ],
+      "text":"Patient Source Domain A"
+   },
+   "system":"urn:oid:2.16.840.1.113883.4.3.20",
+   "value":"1000000001",
+   "assigner":{  
+      "display":"Patient Source Domain A"
+   }
 }
 ```  
-The Patient Identification Domain B issues a patient with its following local identifier: 
-```json
-{ 
-      "use" : "official",
-      "type" : "source",
-      "system" : "http://www.domainb.com/fhir/mpi/localid",
-      "value" : "1000000001",
-      "assigner" : {
-                   	"display" : "Patient Identification Domain B" 
-                   }
-}
-```
-An MPI links these two similar-enough patient records and creates a master patient record with the following master patient identifier:
+The Patient Source B issues a source patient identifier to a patient resource within the Patient Source Domain B.  The following is an example of an identifier:
 ```json  
-{ 
-      "use" : "official",
-      "type" : "mpi",
-      "system" : "http://www.masterdomain.com/fhir/mpi/euid",
-      "value" : "1000000000",
-      "assigner": {
-                     "display" : "Patient Mater Identification Domain" 
-                  }
+{  
+   "use":"official",
+   "type":{  
+      "coding":[  
+         {  
+            "system":"http://www.patient-source-b.com/localid",
+            "code":"PatientSourceB",
+            "display":"Patient Source Domain B"
+         }
+      ],
+      "text":"Patient Source Domain B"
+   },
+   "system":"urn:oid:2.16.840.1.113883.4.3.30",
+   "value":"1000000001",
+   "assigner":{  
+      "display":"Patient Source Domain B"
+   }
 }
 ```
+The EMPI links these two similar-enough source patient resources and generates a master patient resource with a master patient identifier:
+```json
+{  
+   "use":"official",
+   "type":{  
+      "coding":[  
+         {  
+            "system":"http://www.patient-master.com/mpi",
+            "code":"MPI",
+            "display":"Patient Master Domain"
+         }
+      ],
+      "text":"Patient Master Domain"
+   },
+   "system":"urn:oid:2.16.840.1.113883.4.3.10",
+   "value":"1000000000",
+   "assigner":{  
+      "display":"Patient Master Domain"
+   }
+}
+```
+
 An FHIR system demands to manage master patient identifiers. A master patient identifier bonds patient records that are similar enough together. An implementation determines whether an FHIR system maintains a master patient record statically or dynamically.  The underlying MPI determines how two or more patient records are similar enough to embody the same patient using configurable match algorithms. 
 
 ## 5. FHIR MPI Operations/Transactions
