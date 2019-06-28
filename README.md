@@ -148,11 +148,11 @@ The unlink operation “$unlink” unlink two patient identifiers that are invol
 
 ### 5.9 Delete Operation
 
-The delete operation uses the FHIR delete interaction to delete a patient resource or a master patient resource. Deleting a patient resource updates the master patient resource that associated with. It is not required to permanently remove a patient resource. 
+The delete operation uses the FHIR delete interaction to delete a patient resource or a patient master resource. The FHIR EMPI Interface does not introduce a specific operation. Removing a patient resource requires to update the patient master resource associated. A patient master resource will be deleted after the last patient resource of the related patient master identifier removes. The EMPI triggers to reevaluate the potential duplicates after a deletion. It is not necessary to remove patient resource permanently. Both soft deletion and hard deletion are acceptable. For healthcare information system best practice, the patient information deleted shall remain in the transaction log which is used for recovering in the future.
 
 ### 5.10 Undelete Operation
 
-The undelete operation “$undelete” recovers the patient resource that deleted in the delete transaction. It rolls back the delete transaction.
+The undelete operation “$undelete” recovers the patient resource that eliminated in the delete transaction. The undelete process rolls back the delete transaction.
 
 ### 5.11 History Operation
 
