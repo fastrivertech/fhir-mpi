@@ -106,15 +106,17 @@ Refer to FHIR documentation for audit and security of operations.
 
 ### 5.1 Match Operation
 
-The match operation “$match“ accepts a patient resource from one patient identification domain and performs an intelligent search for possible matches in the system using the configured underlying MPI. If it finds a match, it links the patient resource with the matches and updates the master patient resource. Otherwise, it creates a master patient resource and assigns a master patient index identifier. In the match case, the underlying MPI determines if it replaces or updates the matched record from the same patient identification domain. It also evaluates potential duplicates.
+The match operation “$match“ accepts a patient resource from one patient source domain and performs an intelligent search for possible matches in the system using the configured underlying EMPI. If it finds a match, it links the patient resource with the matches and updates the master patient resource. Otherwise, it creates a master patient resource, assigns a master patient identifier, and links the patient resource with the newly created master patient resource.   In the match case, the underlying EMPI determines if it replaces or updates the matched source patient resource from the same patient identification source domain. It also evaluates potential duplicates. The operation accepts match options. The process does not require a minimum set of patient information used for matching.   A distinct EMPI has different match options and resolves a collection of patient information necessary needed for the matching.  An EMPI also can standardize, normalize,  enrich, and validate the patient information. 
 
 ### 5.2 Update Operation
 
-The update operation uses the FHIR update interaction to update an existing patient source resource or a current master patient resource by distinguishing the identifier of the input patient resource. The underlying MPI determines how to update a current patient source resource or an existing master patient resource. Generally, updating a current patient source resource recalculates the master patient resource based on the underlying algorithm configuration.
+The update operation uses the FHIR update interaction to update an existing patient source resource or a current master patient resource. The FHIR EMPI Interface does not introduce a specific operation.  An FHIR system integrating with an EMPI performs an additional process for an update. The underlying EMPI determines how to update a current patient source resource or an existing master patient resource. Generally, updating a current patient source resource recalculates the master patient resource and reevaluates the potential duplicates based on the underlying policy and algorithms.
 
 ### 5.3 Search Operation
 
-The search operation “$search” performs an intelligent search according to the user-specified search criteria. A return contains the master patient resources and patient source resources that matched the search criteria with the match scores. Primarily, a probabilistic search or an advanced similarity search applies to find any patient resources that are similar enough to the search criteria.  The underlying MPI could support different kinds of search modes, for example, fuzzy search or phonetic search.
+The search operation “$search” performs an intelligent search according to the user-specified search criteria. A return contains both of the master patient resources and patient source resources that matched the search criteria with the match scores. Primarily, a probabilistic search or an advanced similarity search applies to find any patient resources that are similar enough to the search criteria.  The underlying EMPI could support different kinds of search modes, for example, fuzzy search, block search, or phonetic search. The search allows for typographical errors and misspellings. 
+
+The EMPI search operation is distinctive with FHIR search interaction; the FHIR search interaction does not trigger the EMPI search capability.  
 
 ### 5.4 Potential Operation
 
