@@ -120,7 +120,7 @@ The EMPI search operation is distinctive with FHIR search interaction; the FHIR 
 
 ### 5.4 Potential Operation
 
-The potential duplicate operation “$potential” retrieves potentially duplicated patient resources on the search criteria. Usually, an MPI requires manual resolution for the potential duplicates.
+The potential operation “$potential” retrieves potentially duplicated patient resources on the search criteria. Usually, an EMPI generates a task and requires manual resolution for the possible duplicates through a data stewardship interface. Not all EMPIs provides an interface to fetch a list of likely duplicates.  
 
 ### 5.5 Merge Operation
 
@@ -132,7 +132,7 @@ Merging two master patient identifiers from a Patient Identification Master Doma
 
 ### 5.6 Unmerge Operation
 
-The unmerge operation “$unmerge” unmerges two patient identifiers that are involved in the most recent merge operation and rolls back the merging transaction. After an unmerge, the subsumed patient identifier becomes active again. Further, the unmerge operation supports two types of unmerge: Source Domain unmerge, and Master Domain unmerge.
+The unmerge operation “$unmerge” unmerges two patient identifiers that are involved in the most recent merge operation and rolls back the merging transaction. After an unmerge, the subsumed patient identifier becomes active and allows to be referenced again. The unmerge operation supports two types of unmerging: source patient identifier unmerge, and master patient identifier unmerge. 
 
 ### 5.7 Link Operation
 
