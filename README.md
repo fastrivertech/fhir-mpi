@@ -138,11 +138,13 @@ The unmerge operation “$unmerge” unmerges two patient identifiers that are i
 
 ### 5.7 Link Operation
 
-The link operation “$link” links one patient identifier to another one within one Source Patient Domain or across two Source Patient Domains. Linking two patient identifiers does not require the actual merging of two patient resources.  After a link, one master patient identifier associates with the linked patient resources and the involved patient records remain distinct. In the case two patient identifiers are not linked and each of them associates with a distinct master patient identifier before a link, linking them merges two master patient identifiers. The MPI determines how to merge two master patient resources based on the configurable algorithms.  
+The link operation “$link” links one patient identifier to another one within one patient source domain or across two patient source domains. Linking two patient identifiers does not require the actual merging of two patient resources.  After a link, the associated patient resources are grouped with one patient master identifier, and the involved patient resource remain distinct. 
+
+Before a link, two patient identifiers are not connected, and each of them associates with a distinct patient master identifier and represent a separate patient. Linking them merges two patient master identifiers and two patient master resources. The integrated EMPI resolves how to combine two patient master resource according to the policy and algorithms.  After a link, the subsumed patient master identifier is not allowed to be referenced.
 
 ### 5.8 Unlink Operation
 
-The unlink operation “$unlink” unlink two patient identifiers that are involved in the most recent link operation and rolls back the linking transaction. After an unlink, the subsumed master patient identifier becomes active again.
+The unlink operation “$unlink” unlink two patient identifiers that are involved in the most recent link operation and rolls back the linking transaction. After an unlink, the subsumed master patient identifier becomes active and allows to be used again.
 
 ### 5.9 Delete Operation
 
