@@ -156,7 +156,7 @@ The undelete operation “$undelete” recovers the patient resource that elimin
 
 ### 5.11 History Operation
 
-The history operation uses the FHIR history interaction to retrieves the history of changes of a patient resource or a patient master resource.  The FHIR EMPI Interface does not introduce a specific operation.  It is suggested to support to fetch a change history of a deleted patient resource or a deleted patient master resource. 
+The history operation uses the FHIR history interaction to retrieves the history of changes of a patient resource or a patient master resource.  The FHIR EMPI Interface does not introduce a specific operation.  It is suggested to support for fetching a change history of a deleted patient resource or a deleted patient master resource. 
 
 ### 5.12 Notification Operation
 
