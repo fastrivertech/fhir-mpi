@@ -1,7 +1,7 @@
 # 6.1 Match Operation
 ## 6.1.1 Description
 
-FHIR MPI match operation “$match” uses FHR R4 match operation. Clients use the “$match” operation to request an underlying MPI to match a patient resource. The process accepts a patient resource with a complete or a partial set of patient attributes.  The operation does not specify any specific MPI matching algorithm, nor a minimum set of information that must be provided to perform an MPI matching operation. Each MPI matching algorithm requires a different set of patient attributes, a different number of parameters, and the different meaning of each parameter. Implementations can define the match operation by specifying a  profile on the resource parameters, indicating a minimum set of information is mandatory for the match operation.  
+FHIR EMPI match operation “$match” uses FHR R4 match operation. This document details the process.  Clients use the “$match” operation to request an underlying EMPI to match a patient resource. The method accepts a patient resource with a complete or a partial set of patient attributes.  The operation does not specify any specific MPI matching algorithm, nor a minimum set of information that must be provided to perform EMPI matching algorithms. Each EMPI matching algorithm requires a different set of patient attributes, a different number of parameters, and the different meaning of each parameter. Implementations can define the match operation by specifying a  profile on the resource parameters, indicating a minimum set of information is mandatory for the match operation.  An EMPI is still responsible for tuning the matching algorithms.
 
 For FHIR match operation definition refer to http://hl7.org/fhir/operationDefintion/Patient-match
 
