@@ -13,7 +13,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Headers | |
 | Body | Parameters Resource |
 
- Request Body 
+## Request Body 
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient detail for the MPI to match  |
