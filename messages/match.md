@@ -9,10 +9,11 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 
 | URL | [BaseUrl]/Patient/$match |
 |:----|:-------------------------|
-| HTTP Method | POST |
-| Request Headers | |
-| Request Body | Parameters Resource |
+| Method | POST |
+| Headers | |
+| Body | Parameters Resource |
 
+ Request Body 
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient detail for the MPI to match  |
