@@ -160,7 +160,7 @@ The history operation uses the FHIR history interaction to retrieves the history
 
 ### 5.12 Notification Operation
 
-The notification operation notifies any application that subscribes on any change on the system. 
+The notification operation notifies any external application that subscribes on any change of the system. A  notification resource delivers from the FHIR system to external applications that have registered the interest in such notifications. An implementation determines to enable synchronous mode, asynchronous mode, or both. The subscription resource is used to define a push-based subscription from a server to another system.  The notification is critical for synchronizing the whole integrated health information systems for an update on the patient resources to maintain the system consistency and integrity.
 
 ## 6. FHIR MPI Operation and Message Definition
 
