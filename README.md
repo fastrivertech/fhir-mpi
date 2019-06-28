@@ -96,9 +96,9 @@ The EMPI links these two similar-enough source patient resources and generates a
 }
 ```
 
-An FHIR system demands to manage master patient identifiers. A master patient identifier bonds patient records that are similar enough together. An implementation determines whether an FHIR system maintains a master patient record statically or dynamically.  The underlying MPI determines how two or more patient records are similar enough to embody the same patient using configurable match algorithms. 
+An FHIR system stores and manages master patient identifiers. A master patient identifier groups source patient resources that are similar enough together based on the similarity algorithms of the integrated EMPI. It is not required to create and persist a master patient resource statically.  The master patient resource can be built on the fly dynamically when the master patient information is retrieved. 
 
-## 5. FHIR MPI Operations/Transactions
+## 5. FHIR EMPI Operations/Transactions
 
 FHIR MPI interface uses the FHIR operation style that defines MPI operations. This document includes the following generic Patient MPI transactions. FHIR MPI operations execute on master patient identification domain and patient identification source domains, and common FHIR interactions are still applicable to these domains.  Refer to FHIR documentation for audit and security of operations.   
 
