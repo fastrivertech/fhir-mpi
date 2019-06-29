@@ -10,7 +10,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | URL | [BaseUrl]/Patient/$match |
 |:----|:-------------------------|
 | Method | POST |
-| Headers | Accept: mime-type;content-encoding <br\> ContentType: mime-type;content-encoding |
+| Headers | Accept: mime-type;content-encoding <br> ContentType: mime-type;content-encoding |
 | Body | Parameters Resource |
 
 <table>
