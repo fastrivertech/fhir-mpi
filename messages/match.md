@@ -59,7 +59,7 @@ The following table lists errors, warnings, and information messages that provid
 
 #### Request: 
 ```json
-POST [BaseUr]/Patient/$match
+POST http://fastrivertech.com/fhir/Patient/$match
 Headers Accept        application/fhir+json;charset=UTF-8
         Content-Type  application/fhir+json;charset=UTF-8
 Request Body
@@ -113,8 +113,8 @@ HTTP/1.1 200 OK
 Headers Content-Type    application/fhir+json;charset=UTF-8
         Date            Sat, 04 May 2019 19:43:51 GMT  
         ETag            "W/1"
-        Last-Modified    Sat, 04 May 2019 19:43:51 GMT
-        Location 	    http://fastrivertech.com/fhir/Patient/1
+        Last-Modified   Sat, 04 May 2019 19:43:51 GMT
+        Location 	   http://fastrivertech.com/fhir/Patient/1
         
 Response Body
 {  
