@@ -23,10 +23,8 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 	<tbody>
         <tr>
             <td>L3 Name A</td>
-        </tr>
-        <tr>
             <td>L3 Name B</td>
-        </tr>
+	</tr>
     </tbody>	  
 	<tbody>
         <tr>
