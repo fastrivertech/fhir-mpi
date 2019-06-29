@@ -4,7 +4,7 @@ Version Beta 1.0
 Fast River Technologies  
 www.fastrivertech.com  
 
-charles.ye@fastrivertech.com
+info@fastrivertech.com
 
 *work-in-progess*
 
