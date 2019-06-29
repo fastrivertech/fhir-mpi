@@ -20,7 +20,15 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
             <th>Layer 2</th>
         </tr>
     </thead>
-    <tbody>
+	<tbody>
+        <tr>
+            <td>L3 Name A</td>
+        </tr>
+        <tr>
+            <td>L3 Name B</td>
+        </tr>
+    </tbody>	  
+	<tbody>
         <tr>
             <td rowspan=4>L1 Name</td>
             <td>L3 Name A</td>
@@ -28,7 +36,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
         <tr>
             <td>L3 Name B</td>
         </tr>
-    </tbody>
+    </tbody>	
 </table>
 
 ## Request Body 
