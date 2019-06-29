@@ -6,7 +6,7 @@ Fast River Technologies
 www.fastrivertech.com  
 info@fastrivertech.com
 
-*work-in-progess*
+*work-in-progress*
 
 ## 1. Introduction
 
