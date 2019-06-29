@@ -6,6 +6,8 @@ www.fastrivertech.com
 
 charles.ye@fastrivertech.com
 
+<small>*work-in-progess*</small>
+
 ## 1. Introduction
 
 This document introduces a collection of FHIR-based EMPI (Enterprise Master Patient Index), or MPI (Master Patient Index), fundamental operations. FHIR R4 includes only match operation. The document defines the request of each EMPI operation,  the response of each EMPI operation, operation outcome details, and error conditions for the transactions of general EMPI operations.  Traditionally, the MPI interfaces are always vendor-specific, proprietary, and complicated. Integrating healthcare information systems with an EMPI is still intricate, and vendor locked. After broadly inspecting industry leading EMPIs including IBM Initiate / Infosphere, Oracle Healthcare MPI, OpenEMPI, InterComponentWae AG ICW MPI, NextGate EMPI, Verato EMPI, Senzing API, and more, we compile a set of simplified FHIR-based EMPI operations for central EMPI transactions. These operations are aimed to service as a unified EMPI interface for FHIR-based healthcare information systems integrating with an EMPI, overcome the challenges of EMPI integration, and make switching the systems to a different EMPI easier.     
