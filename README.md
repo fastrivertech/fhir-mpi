@@ -1,9 +1,9 @@
 # FHIR EMPI Interface
 Version Beta 1.0  
 28 June 2019  
-Fast River Technologies  
-www.fastrivertech.com  
+Fast River Technologies
 
+www.fastrivertech.com  
 info@fastrivertech.com
 
 *work-in-progess*
