@@ -13,8 +13,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Headers | Accept: mime-type;content-encoding <br> ContentType: mime-type;content-encoding |
 | Body | Parameters Resource |
 
-#### Request Body 
-| Parameters |
+#### Request Body: Parameters Resource
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient information for the EMPI to match. |
