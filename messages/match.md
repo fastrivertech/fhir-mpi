@@ -20,22 +20,22 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
             <th>[BaseUrl]/Patient/$match</th>
         </tr>
     </thead>
-	<tbody>
+    <tbody>
         <tr>
             <td>Method</td>
             <td>POST</td>			
         </tr>
     </tbody>	  
-	<tbody>
+    <tbody>
         <tr>
-            <th rowspan=2>Headers</th>
-            <td>Accept</td>
+            <td rowspan=4>Headers</td>          	
+            <td>Accept: mime-type;content-encoding</td>
         </tr>
         <tr>
-            <td>ContentType</td>
+            <td>ContentType: mime-type;content-encoding</td>
         </tr>
     </tbody>	
-	<tbody>
+    <tbody>
         <tr>
             <td>Body</td>
             <td>Parameters Resource</td>			
