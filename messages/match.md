@@ -28,7 +28,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
     </tbody>	  
 	<tbody>
         <tr>
-            <td rowspan=4>Headers</td>
+            <th rowspan=2>Headers</th>
             <td>Accept</td>
         </tr>
         <tr>
