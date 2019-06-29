@@ -57,8 +57,7 @@ The following table lists errors, warnings, and information messages that provid
 
 ## 6.1.6 Examples
 
-Request: 
-
+#### Request: 
 ```json
 POST [BaseUr]/Patient/$match
 {  
@@ -105,8 +104,7 @@ POST [BaseUr]/Patient/$match
   ]
 }
 ```
-
-Response:
+#### Response:
 ```json
 HTTP/1.1 200 OK
 {  
