@@ -13,36 +13,6 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Headers | Accept: mime-type;content-encoding <br> ContentType: mime-type;content-encoding |
 | Body | Parameters Resource |
 
-<table>
-    <thead align="left">
-        <tr>
-            <th>URL</th>
-            <th>[BaseUrl]/Patient/$match</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Method</td>
-            <td>POST</td>			
-        </tr>
-    </tbody>	  
-    <tbody>
-        <tr>
-            <td rowspan=4>Headers</td>          	
-            <td>Accept: mime-type;content-encoding</td>
-        </tr>
-        <tr>
-            <td>ContentType: mime-type;content-encoding</td>
-        </tr>
-    </tbody>	
-    <tbody>
-        <tr>
-            <td>Body</td>
-            <td>Parameters Resource</td>			
-        </tr>
-    </tbody>	  	
-</table>
-
 #### Request Body 
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
