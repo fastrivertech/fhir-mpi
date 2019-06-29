@@ -60,9 +60,9 @@ The following table lists errors, warnings, and information messages that provid
 #### Request: 
 ```json
 POST [BaseUr]/Patient/$match
-Headers: Accept        application/fhir+json;charset=UTF-8
-         Content-Type  application/fhir+json;charset=UTF-8
-Body
+Headers Accept        application/fhir+json;charset=UTF-8
+        Content-Type  application/fhir+json;charset=UTF-8
+Request Body
 {  
   "resourceType":"Parameters",
   "id":"example",
@@ -110,6 +110,13 @@ Body
 #### Response:
 ```json
 HTTP/1.1 200 OK
+Headers Content-Type    application/fhir+json;charset=UTF-8
+        Date            Sat, 04 May 2019 19:43:51 GMT  
+        ETag            "W/1"
+        Last-Modified    Sat, 04 May 2019 19:43:51 GMT
+        Location 	    http://fastrivertech.com/fhir/Patient/1
+        
+Response Body
 {  
   "resourceType":"Bundle",
   "id":"26419249-18b3-45de-b10e-dca0b2e72b",
@@ -120,10 +127,10 @@ HTTP/1.1 200 OK
   "total":2,
   "entry":[  
     {  
-      "fullUrl":"http://server/path/Patient/example",
+      "fullUrl":"http://fastrivertech.com/fhir/Patient/1",
       "resource":{  
         "resourceType":"Patient",
-        "id":"example",
+        "id":"1",
         "identifier":[  
           {  
             "use":"MPI",
@@ -164,10 +171,10 @@ HTTP/1.1 200 OK
       }
     },
     {  
-      "fullUrl":"http://server/path/Patient/292",
+      "fullUrl":"http://fastrivertech.com/fhir/Patient/1",
       "resource":{  
         "resourceType":"Patient",
-        "id":"292",
+        "id":"2",
         "identifier":[  
           {  
             "use":"MPI",
@@ -187,7 +194,7 @@ HTTP/1.1 200 OK
           }
         ],
         "mode":"match",
-        "score":0.2
+        "score":0.5
       },
       "response":{  
         "status":"possible"
