@@ -6,7 +6,7 @@ www.fastrivertech.com
 
 charles.ye@fastrivertech.com
 
-<small>*work-in-progess*</small>
+<sub><sup>*work-in-progess*</sub></sup>
 
 ## 1. Introduction
 
