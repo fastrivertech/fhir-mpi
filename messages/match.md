@@ -33,7 +33,7 @@ Refer to https://www.hl7.org/fhir/extension-match-grade.html for match grade.
 
 ## 6.1.4 OperationOutcome
 
-Following table lists error, warning, and information messages that provide detailed information about the outcome of the operation. Each MPI generates different information about the result of the operation. 
+The following table lists errors, warnings, and information messages that provide detailed information about the outcome of the operation. Each EMPI generates different details on the result of the transaction.
 
 | Issue Severity | Issue Code | Issue Detail | Issue Diagnostics |
 |:---------------|:-----------|:-------------|:------------------|
