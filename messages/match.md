@@ -14,6 +14,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Body | Parameters Resource |
 
 #### Request Body 
+| Parameters |
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient information for the EMPI to match. |
