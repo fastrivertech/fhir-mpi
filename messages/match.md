@@ -60,6 +60,9 @@ The following table lists errors, warnings, and information messages that provid
 #### Request: 
 ```json
 POST [BaseUr]/Patient/$match
+Headers: Accept        application/fhir+json;charset=UTF-8
+         Content-Type  application/fhir+json;charset=UTF-8
+Body
 {  
   "resourceType":"Parameters",
   "id":"example",
