@@ -14,7 +14,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
 | Body | Parameters Resource |
 
 <table>
-    <thead>
+    <thead align="left">
         <tr>
             <th>URL</th>
             <th>[BaseUrl]/Patient/$match</th>
@@ -28,7 +28,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
     </tbody>	  
 	<tbody>
         <tr>
-            <td rowspan=4>Healders/td>
+            <td rowspan=4>Headers</td>
             <td>Accept</td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@ For FHIR match operation definition refer to http://hl7.org/fhir/operationDefint
     </tbody>	  	
 </table>
 
-## Request Body 
+#### Request Body 
 | Name | Cardinality | Type | Description |
 |:-----|:------------|:-----|:------------|
 | Resource | 1..1 | Patient |  This parameter provides a set of mandatory patient detail for the MPI to match  |
